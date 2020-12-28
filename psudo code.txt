@@ -1,0 +1,53 @@
+project outline
+
+create a anki styled space repitition library
+
+create a deck
+create a card
+
+needs to be saveable to a sql database
+
+
+
+
+{
+	onNext:(card)=>{}
+	onFinish:()=>{}
+}
+
+
+deck functions
+deck = new Deck().create({
+	onNext:(card)=>{}
+	onFinish:()=>{}
+})
+deck.add_cards([{front, back}])
+
+deck = new Deck().load({
+	cards:[],
+	onNext:(card)=>{}
+	onFinish:()=>{}
+})
+deck.start(); - returns either card or undefined if none
+deck.stop();
+deck.json(); {deck_id, cards:[], style:{}}
+
+card functions
+card.answer("ok") - "bad" "ok" "great"
+card.hide()
+
+
+DB data
+deck 
+	deck_id string
+	epoch_easing number
+	cards:[]
+	
+card
+	card_id:string
+	front string
+	back string
+	epoch number
+	style_id string?
+	category? []
+	
