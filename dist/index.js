@@ -105,9 +105,10 @@ return /******/ (function(modules) { // webpackBootstrap
   !*** ./src/index.ts ***!
   \**********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("var Deck = /** @class */ (function () {\r\n    function Deck(props) {\r\n        this.helllo = 'world';\r\n    }\r\n    return Deck;\r\n}());\r\nvar global = window || global;\r\nglobal.Deck = Deck;\r\n\n\n//# sourceURL=webpack://SpaceRepetition/./src/index.ts?");
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.Deck = void 0;\r\nvar Deck = /** @class */ (function () {\r\n    function Deck(props) {\r\n        this.hello = 'world';\r\n    }\r\n    return Deck;\r\n}());\r\nexports.Deck = Deck;\r\nvar global = window || global;\r\nglobal.Deck = Deck;\r\n\n\n//# sourceURL=webpack://SpaceRepetition/./src/index.ts?");
 
 /***/ })
 
