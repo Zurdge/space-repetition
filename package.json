@@ -2,7 +2,7 @@
   "name": "space-repetition",
   "version": "1.0.0",
   "description": "Space Repetition Module",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "webpack": "webpack --config ./webpack.config.js",
     "dev:build": "nodemon --exec npm run webpack",
@@ -40,7 +40,7 @@
   },
   "nodemonConfig": {
     "ignore": [
-      "build/*"
+      "dist/*"
     ],
     "ext": "js html css scss tsx ts json"
   },

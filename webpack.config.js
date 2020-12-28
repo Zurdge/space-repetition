@@ -7,11 +7,11 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.ts'),
   mode: environment,
   output: {
-    library: 'someLibName',
+    library: 'SpaceRepetition',
     libraryTarget: 'umd',
     filename: 'index.js',
     auxiliaryComment: 'Test Comment',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
