@@ -86,6 +86,30 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/card.ts":
+/*!*********************!*\
+  !*** ./src/card.ts ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.Card = void 0;\r\nvar Card = /** @class */ (function () {\r\n    function Card(props) {\r\n    }\r\n    return Card;\r\n}());\r\nexports.Card = Card;\r\n\n\n//# sourceURL=webpack:///./src/card.ts?");
+
+/***/ }),
+
+/***/ "./src/deck.ts":
+/*!*********************!*\
+  !*** ./src/deck.ts ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.Deck = void 0;\r\nvar Deck = /** @class */ (function () {\r\n    function Deck(props) {\r\n        this.create = function (_a) {\r\n            var onNext = _a.onNext, onFinish = _a.onFinish;\r\n            console.log('New deck created!');\r\n        };\r\n    }\r\n    return Deck;\r\n}());\r\nexports.Deck = Deck;\r\n\n\n//# sourceURL=webpack:///./src/deck.ts?");
+
+/***/ }),
+
 /***/ "./src/index.ts":
 /*!**********************!*\
   !*** ./src/index.ts ***!
@@ -94,7 +118,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.Deck = void 0;\r\nvar Deck = /** @class */ (function () {\r\n    function Deck(props) {\r\n        this.hello = 'world';\r\n    }\r\n    return Deck;\r\n}());\r\nexports.Deck = Deck;\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("\r\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\r\n    if (k2 === undefined) k2 = k;\r\n    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });\r\n}) : (function(o, m, k, k2) {\r\n    if (k2 === undefined) k2 = k;\r\n    o[k2] = m[k];\r\n}));\r\nvar __exportStar = (this && this.__exportStar) || function(m, exports) {\r\n    for (var p in m) if (p !== \"default\" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n__exportStar(__webpack_require__(/*! ./deck */ \"./src/deck.ts\"), exports);\r\n__exportStar(__webpack_require__(/*! ./card */ \"./src/card.ts\"), exports);\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ })
 

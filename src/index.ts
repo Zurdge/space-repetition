@@ -1,8 +1,2 @@
-class Deck{
-  hello = 'world';
-  constructor(props:Deck.props){
-
-  }
-}
-
-export {Deck}
+export * from './deck';
+export * from './card';

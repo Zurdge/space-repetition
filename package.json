@@ -2,7 +2,8 @@
   "name": "space-repetition",
   "version": "1.0.0",
   "description": "Space Repetition Module",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
+  "source": "src",
   "scripts": {
     "webpack": "webpack --config ./webpack.config.js",
     "dev:build": "nodemon --exec npm run webpack",
