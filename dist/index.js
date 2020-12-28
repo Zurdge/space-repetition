@@ -1,18 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	//Test Comment
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	//Test Comment
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	//Test Comment
-	else if(typeof exports === 'object')
-		exports["SpaceRepetition"] = factory();
-	//Test Comment
-	else
-		root["SpaceRepetition"] = factory();
-})(window, function() {
-return /******/ (function(modules) { // webpackBootstrap
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -108,9 +94,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.Deck = void 0;\r\nvar Deck = /** @class */ (function () {\r\n    function Deck(props) {\r\n        this.hello = 'world';\r\n    }\r\n    return Deck;\r\n}());\r\nexports.Deck = Deck;\r\nvar global = window || global;\r\nglobal.Deck = Deck;\r\n\n\n//# sourceURL=webpack://SpaceRepetition/./src/index.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.Deck = void 0;\r\nvar Deck = /** @class */ (function () {\r\n    function Deck(props) {\r\n        this.hello = 'world';\r\n    }\r\n    return Deck;\r\n}());\r\nexports.Deck = Deck;\r\n\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ })
 
 /******/ });
-});

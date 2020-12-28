@@ -4,6 +4,5 @@ class Deck{
 
   }
 }
-var global:any = window || global;
-global.Deck = Deck;
+
 export {Deck}

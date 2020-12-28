@@ -6,11 +6,9 @@ var environment = 'development';
 module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.ts'),
   mode: environment,
+  target: 'node',
   output: {
-    library: 'SpaceRepetition',
-    libraryTarget: 'umd',
     filename: 'index.js',
-    auxiliaryComment: 'Test Comment',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
