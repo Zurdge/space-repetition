@@ -70,7 +70,7 @@ import { Deck } from './deck';
 //   prompt.get(['export'], function(err: any, result: any) {
 //     switch (result.again) {
 //       case 'y': {
-//         console.log(JSON.stringify(d.export()))
+//         console.log(JSON.stringify(d.export(), null,2))
 //         break;
 //       }
 //       case 'n': {
@@ -78,7 +78,7 @@ import { Deck } from './deck';
 //         break;
 //       }
 //       default:{
-//         console.log(JSON.stringify(d.export()))
+//         console.log(JSON.stringify(d.export(), null,2))
 //       }
 //     }
 //   })

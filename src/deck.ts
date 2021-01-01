@@ -81,6 +81,9 @@ class Deck{
   add_cards = (cards:Array<{front:string, back:string}>)=>{
     cards.map((card)=>this.cards.push(new Card({front:card.front, back:card.back, deck:this})));
   }
+  load_cards = (cards:Array<{card_id:any, epoch:string, epoch_step:number, front:string, back:string}>)=>{
+    cards.map((card)=>this.cards.push(new Card({card_id:card.card_id, epoch:card.epoch, epoch_step:card.epoch_step, front:card.front, back:card.back, deck:this})));
+  }
   export = ()=>{
     const out:any = {
       cards:[],
