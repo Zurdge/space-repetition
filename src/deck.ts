@@ -7,6 +7,7 @@ class Deck{
   public deck_id:string;
   public cards:Array<Card> = Array();
   //Private Variables
+  private total_cards_studying:number;
   public study_stack:Array<Card> = [];
   //Events
   public onNext:(card:Card)=>void;
@@ -20,6 +21,9 @@ class Deck{
       if(this.cards[i].card_id == id) return this.cards[i];
     }
   }
+  initalize = ()=>{
+    this.total_cards_studying = this.study_stack.length;
+  }
   create = ({
     onNext, onFinish
   }:DeckBase.Functions.create)=>{
@@ -32,6 +36,7 @@ class Deck{
     if(!this.onFinish) throw new Error('onFinish must be set');
 
     this.generate_stack();
+    this.initalize();
     this.next();
   }
   next = ()=>{
@@ -84,6 +89,18 @@ class Deck{
   load_cards = (cards:Array<{card_id:any, epoch:string, epoch_step:number, front:string, back:string}>)=>{
     cards.map((card)=>this.cards.push(new Card({card_id:card.card_id, epoch:card.epoch, epoch_step:card.epoch_step, front:card.front, back:card.back, deck:this})));
   }
+  stats = ()=>{
+    const cards_new       = this.study_stack.filter((card)=>{return card.epoch_step < 300}).length;
+    const cards_learning  = this.study_stack.filter((card)=>{return card.epoch_step > 300}).length;
+    const cards_learnt    = this.total_cards_studying - this.study_stack.length
+    const progress        = 1 - (this.study_stack.length / this.total_cards_studying)
+    return {
+      cards_new       :cards_new,
+      cards_learning  :cards_learning,
+      cards_learnt    :cards_learnt,
+      progress        :parseFloat(progress.toFixed(2))
+    }
+  }
   export = ()=>{
     const out:any = {
       cards:[],
@@ -105,6 +122,7 @@ class Deck{
     }
     return out;
   }
+
 }
 
 export {Deck}
